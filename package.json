@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open --quiet",
+    "cypress:run": "cypress run --spec cypress/e2e/youtube_samples --quiet --no-exit --headed"
     
   },
   "repository": {
