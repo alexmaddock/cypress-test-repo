@@ -16,17 +16,29 @@ describe('Search Video', () => {
       cy.get('@video title').click()
     });
 
-    cy.get('#title').contains('Design Patters for sustainable automatic');
-    cy.get('#subscribe-button-shape').contains('subscribe').should('be.visible');
-    cy.get('button').contains('Share').should('be.visible');
+    cy.get('#above-the-fold').contains("Design Patterns for sustainable automatic");
+    cy.get('#subscribe-button-shape').contains('Subscribe').should('be.visible');
+    // cy.get('#top-level-buttons-computed').contains('Share').should('be.visible');
+
+    // Expand Description with more button
+    cy.get('#attributed-snippet-text').then((el) => {
+      let textLength = el.getText();
+      cy.log(textLength.length);
+      expect(textLength).to.be.lessThan(40);
+
+      cy.get('#expand').click();
+      textLength = el.getText();
+      expect(textLength).to.be.greaterThan(40);
+    })
+
 
   });
 
-  it.only('videos can be sorted correctly by most recent comments', () => {
+  it('videos can be sorted correctly by most recent comments', () => {
 
   })
 
-  it.only('videos can be sorted by most popular comments', () => {
+  it('videos can be sorted by most popular comments', () => {
 
   })
 
