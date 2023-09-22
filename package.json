@@ -1,0 +1,24 @@
+{
+  "name": "cypress-test-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "cypress:open": "cypress open"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmaddock/cypress-test-repo.git"
+  },
+  "author": "alex maddock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmaddock/cypress-test-repo/issues"
+  },
+  "homepage": "https://github.com/alexmaddock/cypress-test-repo#readme",
+  "devDependencies": {
+    "cypress": "^13.2.0"
+  }
+}
